@@ -61,7 +61,7 @@ var items = [
     ["send", "__SendResults__", { }]   
     ,
     ["prolificConf", "PennController", PennController(
-        newHtml("thanks", "ProlificConfirmation.html")
+        newHtml("thanks", (PennController.GetURLParameter('id')=='undefined'?"Thanks.html":"ProlificConfirmation.html"))
             .settings.log()
             .print() 
         ,
@@ -147,7 +147,7 @@ PennController.FeedItems( PennController.GetTable( "SW-datasource-DiscFam.csv" )
     .log("mcpred", item.mcpred)  
  //   .log("Stims", item.Stims)  
     .log("source", PennController.GetURLParameter("source"))  
-    .log("PROLIFIC_PID", PennController.GetURLParameter("PROLIFIC_PID")) 
+    .log("PROLIFIC_PID", PennController.GetURLParameter("id")) 
 );
 
 
