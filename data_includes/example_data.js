@@ -80,7 +80,7 @@ PennController.FeedItems( PennController.GetTable( "SW-datasource-DiscFam.csv" )
             .start()
             .wait()
         ,    
-        newTooltip("instructions", "Klicka på mellanslagstangenten f&ouml;r att forts&auml;tta.")
+        newTooltip("instructions", "Klicka p&aring; mellanslagstangenten f&ouml;r att forts&auml;tta.")
             .settings.size(180, 25)
             .settings.position("bottom center")
             .settings.key(" ", "no click")
@@ -146,7 +146,8 @@ PennController.FeedItems( PennController.GetTable( "SW-datasource-DiscFam.csv" )
     .log("EmbCondition", item.EmbCondition)
     .log("mcpred", item.mcpred)  
  //   .log("Stims", item.Stims)  
-    .log("source", PennController.GetURLParameter("source"))
+    .log("source", PennController.GetURLParameter("source"))  
+    .log("PROLIFIC_PID", PennController.GetURLParameter("PROLIFIC_PID")) 
 );
 
 
